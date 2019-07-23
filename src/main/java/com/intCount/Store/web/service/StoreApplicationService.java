@@ -1,6 +1,12 @@
 package com.intCount.Store.web.service;
 
-public class StoreApplicationService {
+import java.util.List;
+
+import com.intCount.Store.common.dto.ItemsDto;
+
+
+public interface StoreApplicationService {
+
+	List<ItemsDto> getAllItems();
 
 }
-

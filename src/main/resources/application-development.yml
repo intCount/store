@@ -1,0 +1,24 @@
+spring:
+  profiles: development
+  jpa:
+    database: MYSQL
+    properties:
+      hibernate:
+        default-schema: intCount
+    hibernate:
+      ddl-auto: none
+  datasource:
+    url: jdbc:mysql://mysql:3306/intCount
+    platform: mysql
+    username: intCount
+    password: 6am<qZRq)EFg]Aht
+    initialization-mode: never
+    driver-class-name: com.mysql.jdbc.Driver
+  application:
+    name: store-service
+management:
+  security.enabled: false
+  port: 40008
+server:
+  port: 8080
+logging.level.org.springframework.security: DEBUG
