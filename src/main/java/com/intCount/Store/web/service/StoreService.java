@@ -5,7 +5,7 @@ import java.util.List;
 import com.intCount.Store.common.dto.ItemsDto;
 
 
-public interface StoreApplicationService {
+public interface StoreService {
 
 	List<ItemsDto> getAllItems();
 
