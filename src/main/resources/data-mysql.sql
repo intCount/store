@@ -1,0 +1,1 @@
+INSERT INTO `items` (`items_id`,`items_name`, `items_price`) VALUES ('Laptop', 1000.00);

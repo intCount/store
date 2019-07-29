@@ -22,6 +22,9 @@ public class StoreController {
 
 	protected final StoreApplicationService storeApplicationService;
 
+    //private ModelMapper modelMapper;
+    //modelMapper.map(Item,ItemsDto);
+
 	@Autowired
 	public StoreController(StoreApplicationService storeApplicationService) {
 		if (storeApplicationService == null) {
@@ -37,5 +40,4 @@ public class StoreController {
 
 		return new ResponseEntity<>(itemDto, HttpStatus.OK);
 	}
-
 }

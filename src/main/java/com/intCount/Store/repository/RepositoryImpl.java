@@ -8,4 +8,5 @@ import com.intCount.Store.business.Repository;
 @Transactional
 public class RepositoryImpl implements Repository {
 
+
 }

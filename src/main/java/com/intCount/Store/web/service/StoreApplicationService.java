@@ -7,6 +7,7 @@ import com.intCount.Store.common.dto.ItemsDto;
 
 public interface StoreApplicationService {
 
+
 	List<ItemsDto> getAllItems();
 
 }
