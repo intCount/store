@@ -3,11 +3,13 @@ package com.intCount.Store.infrastructure.mapper;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import com.intCount.Store.common.model.ItemsEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.intCount.Store.common.dto.ItemsDto;
-import com.intCount.Store.common.model.ItemsEntity;
+import org.springframework.stereotype.Service;
 
+@Service
 public class StoreDataMapper {
 
 	@Autowired
