@@ -3,7 +3,7 @@ package com.intCount.Store.common.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "customers", schema = "store", catalog = "")
+@Table(name = "customers", schema = "intcount", catalog = "")
 public class CustomersEntity {
     private int id;
     private String email;

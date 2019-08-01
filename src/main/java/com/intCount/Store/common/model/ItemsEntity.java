@@ -3,7 +3,7 @@ package com.intCount.Store.common.model;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "items", schema = "store", catalog = "")
+@Table(name = "items", schema = "intcount", catalog = "")
 public class ItemsEntity {
     private int id;
     private String name;
@@ -30,7 +30,7 @@ public class ItemsEntity {
     }
 
     @Basic
-    @Column(name = "price")
+    @Column(name = "Price")
     public double getPrice() {
         return price;
     }

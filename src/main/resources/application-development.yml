@@ -5,15 +5,16 @@ spring:
     properties:
       hibernate:
         default-schema: intCount
+        dialect : org.hibernate.dialect.MySQL5Dialect
     hibernate:
       ddl-auto: none
+
   datasource:
     url: jdbc:mysql://mysql:3306/intCount
     platform: mysql
     username: root
     password:
     initialization-mode: never
-    driver-class-name: com.mysql.jdbc.Driver
   application:
     name: store-service
 management:

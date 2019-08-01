@@ -1,14 +1,13 @@
 package com.intCount.Store.common.model;
 
 import javax.persistence.*;
-import java.sql.Date;
 
 @Entity
-@Table(name = "commands", schema = "store", catalog = "")
+@Table(name = "commands", schema = "intcount", catalog = "")
 public class CommandsEntity {
     private int id;
-    private Date date;
-    private CustomersEntity customersByIdCustomer;
+    private String name;
+    private int customersByIdCustomer;
 
     @Id
     @Column(name = "id")
@@ -21,13 +20,23 @@ public class CommandsEntity {
     }
 
     @Basic
-    @Column(name = "date")
-    public Date getDate() {
-        return date;
+    @Column(name = "name")
+    public String getName() {
+        return name;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Basic
+    @Column(name = "customersByIdCustomer")
+    public int getCustomersByIdCustomer() {
+        return customersByIdCustomer;
+    }
+
+    public void setCustomersByIdCustomer(int customersByIdCustomer) {
+        this.customersByIdCustomer = customersByIdCustomer;
     }
 
     @Override
@@ -38,7 +47,8 @@ public class CommandsEntity {
         CommandsEntity that = (CommandsEntity) o;
 
         if (id != that.id) return false;
-        if (date != null ? !date.equals(that.date) : that.date != null) return false;
+        if (customersByIdCustomer != that.customersByIdCustomer) return false;
+        if (name != null ? !name.equals(that.name) : that.name != null) return false;
 
         return true;
     }
@@ -46,17 +56,8 @@ public class CommandsEntity {
     @Override
     public int hashCode() {
         int result = id;
-        result = 31 * result + (date != null ? date.hashCode() : 0);
+        result = 31 * result + (name != null ? name.hashCode() : 0);
+        result = 31 * result + customersByIdCustomer;
         return result;
-    }
-
-    @ManyToOne
-    @JoinColumn(name = "idCustomer", referencedColumnName = "id", nullable = false)
-    public CustomersEntity getCustomersByIdCustomer() {
-        return customersByIdCustomer;
-    }
-
-    public void setCustomersByIdCustomer(CustomersEntity customersByIdCustomer) {
-        this.customersByIdCustomer = customersByIdCustomer;
     }
 }

@@ -27,5 +27,5 @@ CREATE TABLE `commandlines` (
   `idItems` INTEGER,
   `idCommands` INTEGER,
   `quantity` INTEGER,
-  PRIMARY KEY (`items_id`)
+  PRIMARY KEY (`idItems`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
