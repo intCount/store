@@ -1,5 +1,4 @@
 DROP TABLE IF EXISTS `Items`;
-​
 CREATE TABLE `items` (
   `id` INTEGER AUTO_INCREMENT,
   `name` varchar(36) NOT NULL,
@@ -7,6 +6,7 @@ CREATE TABLE `items` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+DROP TABLE IF EXISTS `customers`;
 CREATE TABLE `customers` (
   `id` INTEGER AUTO_INCREMENT,
   `email` varchar(36) NOT NULL,
@@ -14,6 +14,7 @@ CREATE TABLE `customers` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+DROP TABLE IF EXISTS `commands`;
 CREATE TABLE `commands` (
   `id` INTEGER AUTO_INCREMENT,
   `name` varchar(36) NOT NULL,
@@ -21,6 +22,7 @@ CREATE TABLE `commands` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+DROP TABLE IF EXISTS `commandlines`;
 CREATE TABLE `commandlines` (
   `idItems` INTEGER,
   `idCommands` INTEGER,

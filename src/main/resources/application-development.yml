@@ -10,8 +10,8 @@ spring:
   datasource:
     url: jdbc:mysql://mysql:3306/intCount
     platform: mysql
-    username: intCount
-    password: 6am<qZRq)EFg]Aht
+    username: root
+    password:
     initialization-mode: never
     driver-class-name: com.mysql.jdbc.Driver
   application:
